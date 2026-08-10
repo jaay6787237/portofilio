@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohib Maulana Jaya — Portfolio & Software Engineer</title>
+    <meta name="description" content="Portfolio resmi Sohib Maulana Jaya, seorang Software Engineer & Web Developer. Lihat pengalaman, pendidikan, proyek terbaru, dan pencapaian profesional di sini.">
+    <meta name="keywords" content="Sohib Maulana Jaya, Portfolio, Web Developer, Software Engineer, Full Stack Developer, Indonesia, React, Node.js">
+    <meta name="author" content="Sohib Maulana Jaya">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sohibmaulanajaya.com/">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sohibmaulanajaya.com/">
+    <meta property="og:title" content="Sohib Maulana Jaya — Portfolio Profesional">
+    <meta property="og:description" content="Portfolio resmi Sohib Maulana Jaya. Temukan informasi pengalaman kerja, proyek unggulan, dan keahlian di bidang pengembangan software.">
+    <meta property="og:image" content="https://i.ibb.co.com/LXhJSNMK/Screenshot-20260810-095900.png">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sohibmaulanajaya.com/">
+    <meta name="twitter:title" content="Sohib Maulana Jaya — Portfolio Profesional">
+    <meta name="twitter:description" content="Portfolio resmi Sohib Maulana Jaya. Temukan informasi pengalaman kerja, proyek unggulan, dan pencapaian.">
+    <meta name="twitter:image" content="https://i.ibb.co.com/LXhJSNMK/Screenshot-20260810-095900.png">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sohib Maulana Jaya",
+      "url": "https://sohibmaulanajaya.com/",
+      "image": "https://i.ibb.co.com/LXhJSNMK/Screenshot-20260810-095900.png",
+      "jobTitle": "Software Engineer & Web Developer",
+      "sameAs": [
+        "https://www.linkedin.com/in/sohib-maulana-jaya",
+        "https://github.com/sohibmaulanajaya",
+        "https://www.instagram.com/jaaay.77"
+      ]
+    }
+    </script>
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#10b981',
+                            neon: '#22c55e',
+                            emerald: '#059669',
+                            dark: '#030712',
+                            card: '#0b1320',
+                            cardBorder: 'rgba(16, 185, 129, 0.25)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #030712;
+            color: #f1f5f9;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Neon Emerald to Green Gradient Accent */
+        .gradient-text {
+            background: linear-gradient(135deg, #22c55e 0%, #10b981 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #030712;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gradient-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Dark Glassmorphism Card Styling with Green Border */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(34, 197, 94, 0.45);
+            box-shadow: 0 14px 35px -8px rgba(16, 185, 129, 0.2);
+        }
+
+        /* Interactive Mouse Spotlight on Glass Cards */
+        .spotlight-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spotlight-card::before {
+            content: '';
+            position: absolute;
+            top: var(--mouse-y, -100px);
+            left: var(--mouse-x, -100px);
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.18) 0%, rgba(16, 185, 129, 0.05) 50%, transparent 70%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .spotlight-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Text Gradient Animated Shimmer */
+        @keyframes gradientShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-text-animated {
+            background: linear-gradient(120deg, #22c55e 0%, #10b981 35%, #6ee7b7 60%, #10b981 85%, #22c55e 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShimmer 6s ease infinite;
+        }
+
+        /* Floating Blob Animation for Background Ambient */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        .animate-float-slow {
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+
+        .animate-float-delayed {
+            animation: floatSlow 10s ease-in-out 3s infinite;
+        }
+
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+        }
+
+        /* Background signature pattern for Hero */
+        .hero-dot-grid {
+            background-image: radial-gradient(#1f2937 1.2px, transparent 1.2px);
+            background-size: 24px 24px;
+        }
+
+        /* Signature Large Watermark Outline Number */
+        .watermark-num {
+            font-size: clamp(4rem, 10vw, 7.5rem);
+            font-weight: 800;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1.5px rgba(16, 185, 129, 0.15);
+            user-select: none;
+            pointer-events: none;
+        }
+
+        /* Ticker Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 22s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* ========================================================
+           BIDIRECTIONAL SCROLL REVEAL ANIMATIONS (UP & DOWN)
+           ======================================================== */
+        .reveal {
+            opacity: 0;
+            will-change: opacity, transform;
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Stagger Delays for Sequential Smooth Entrances */
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* Default initial state when scrolling down: slide from below */
+        .reveal.slide-from-bottom {
+            transform: translateY(40px) scale(0.98);
+        }
+
+        /* Initial state when scrolling up: slide from above */
+        .reveal.slide-from-top {
+            transform: translateY(-40px) scale(0.98);
+        }
+
+        /* Active state when element enters viewport */
+        .reveal.reveal-active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Top Reading Scroll Indicator Bar */
+        #scrollProgressBar {
+            transform-origin: left;
+            transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22c55e;
+        }
+
+        /* Respect accessibility preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .animate-marquee, .animate-float-slow, .animate-float-delayed, .gradient-text-animated {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-green selection:text-black">
+
+    <!-- TOP SCROLL PROGRESS BAR -->
+    <div id="scrollProgressBar" class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-green via-brand-neon to-emerald-300 z-[100] scale-x-0 pointer-events-none"></div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainNav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo / Inisial -->
+                <a href="#" class="text-lg sm:text-xl font-extrabold tracking-tight text-white group flex items-center gap-2.5">
+                    <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-brand-neon to-brand-emerald text-black flex items-center justify-center font-bold text-xs sm:text-sm shadow-md shadow-brand-green/20 group-hover:scale-105 transition-transform">
+                        SMJ
+                    </span>
+                    <span class="tracking-tight text-white">Sohib <span class="text-brand-green">Maulana Jaya</span></span>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-medium text-sm text-slate-300">
+                    <a href="#tentang" class="hover:text-brand-green transition-colors py-1 relative group">
+                        Tentang
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#pendidikan" class="hover:text-brand-green transition-colors py-1 relative group">
+                        Pendidikan
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#pengalaman" class="hover:text-brand-green transition-colors py-1 relative group">
+                        Pengalaman
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#prestasi" class="hover:text-brand-green transition-colors py-1 relative group">
+                        Prestasi
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#projek" class="hover:text-brand-green transition-colors py-1 relative group">
+                        Projek
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+
+                <!-- CTA Navbar Button -->
+                <div class="hidden md:block">
+                    <a href="#kontak" class="gradient-btn font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-sm inline-block">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+                    <svg class="w-6 h-6 transition-transform duration-300" id="menuIconSvg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menuPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 px-4 pt-3 pb-6 space-y-2 font-medium text-slate-200 transition-all duration-300">
+            <a href="#tentang" class="block py-2.5 px-4 rounded-xl hover:bg-slate-900 hover:text-brand-green transition-colors">Tentang</a>
+            <a href="#pendidikan" class="block py-2.5 px-4 rounded-xl hover:bg-slate-900 hover:text-brand-green transition-colors">Pendidikan</a>
+            <a href="#pengalaman" class="block py-2.5 px-4 rounded-xl hover:bg-slate-900 hover:text-brand-green transition-colors">Pengalaman</a>
+            <a href="#prestasi" class="block py-2.5 px-4 rounded-xl hover:bg-slate-900 hover:text-brand-green transition-colors">Prestasi</a>
+            <a href="#projek" class="block py-2.5 px-4 rounded-xl hover:bg-slate-900 hover:text-brand-green transition-colors">Projek</a>
+            <a href="#kontak" class="block w-full text-center gradient-btn font-bold py-3 rounded-xl shadow-sm mt-3 text-xs uppercase tracking-wider">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <main class="w-full">
+        <!-- 1. HERO SECTION -->
+        <section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-32 overflow-hidden hero-dot-grid" id="hero">
+            <!-- Glow Effect Dekoratif Hero Green dengan Animasi Ambient Floating -->
+            <div class="absolute top-1/4 right-5 sm:right-10 w-72 sm:w-96 h-72 sm:h-96 bg-brand-green/15 rounded-full blur-3xl -z-10 pointer-events-none animate-float-slow"></div>
+            <div class="absolute bottom-10 left-5 sm:left-10 w-64 sm:w-80 h-64 sm:h-80 bg-brand-emerald/20 rounded-full blur-3xl -z-10 pointer-events-none animate-float-delayed"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Text Content Area -->
+                    <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+                        <div class="reveal">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-brand-green font-semibold text-xs tracking-wider uppercase transition-all duration-300 hover:border-emerald-500/40 hover:bg-emerald-500/20 shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+                                Available for opportunities & collaborations
+                            </span>
+                        </div>
+
+                        <h1 class="reveal reveal-delay-1 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] sm:leading-[1.1] tracking-tight">
+                            Halo, saya <br class="hidden sm:inline"><span class="gradient-text-animated">Sohib Maulana Jaya</span>
+                        </h1>
+
+                        <p class="reveal reveal-delay-2 text-base sm:text-lg lg:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Seorang Software Engineer & Web Developer yang berfokus membangun solusi aplikasi digital modern, responsif, dan berperforma tinggi.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="reveal reveal-delay-3 pt-2 sm:pt-4 flex flex-col sm:flex-row gap-3.5 sm:gap-4 justify-center lg:justify-start items-center">
+                            <a href="#projek" class="w-full sm:w-auto gradient-btn font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-brand-green/20 flex items-center justify-center gap-2 group text-sm active:scale-95">
+                                Lihat Projek
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sohib-maulana-jaya" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-900/90 hover:bg-slate-800 text-slate-100 font-semibold px-7 py-3.5 rounded-xl border border-slate-700/80 shadow-sm transition-all hover:border-brand-green/50 flex items-center justify-center gap-2 text-sm active:scale-95">
+                                Profil LinkedIn
+                                <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Profile Photo Container -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end reveal mt-4 lg:mt-0">
+                        <div class="relative group w-full max-w-xs sm:max-w-md">
+                            <!-- Glow background -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-brand-neon to-brand-emerald rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                            
+                            <!-- Glass Frame Spotlight -->
+                            <div class="relative glass-card spotlight-card p-3 sm:p-4 rounded-3xl">
+                                <!-- FOTO PROFIL SOHIB MAULANA JAYA -->
+                                <img src="https://i.ibb.co.com/LXhJSNMK/Screenshot-20260810-095900.png" 
+                                     alt="Foto Profil Sohib Maulana Jaya - LinkedIn Software Engineer" 
+                                     class="w-full h-[320px] sm:h-[400px] object-cover object-center rounded-2xl shadow-inner bg-slate-900 group-hover:scale-[1.01] transition-transform duration-500"
+                                     loading="eager">
+
+                                <!-- Badge Caption Profil LinkedIn -->
+                                <div class="mt-3 p-3 rounded-xl bg-slate-950/80 border border-emerald-500/20 text-center">
+                                    <p class="text-xs font-bold text-white flex items-center justify-center gap-1.5">
+                                        <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                        </svg>
+                                        Sohib Maulana Jaya
+                                    </p>
+                                    <p class="text-[11px] text-brand-green font-medium mt-0.5">Software Engineer & Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MARQUEE / TICKER (Running Skills Text) -->
+        <section class="py-4 sm:py-5 bg-slate-950 text-white overflow-hidden border-y border-emerald-950/80" aria-label="Daftar keahlian Sohib Maulana Jaya">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <div class="flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold uppercase tracking-wider text-emerald-400/90 pr-6 sm:pr-8">
+                    <span>✦ Software Development</span>
+                    <span>✦ Web Development</span>
+                    <span>✦ Full Stack Engineering</span>
+                    <span>✦ React & Next.js</span>
+                    <span>✦ JavaScript & TypeScript</span>
+                    <span>✦ Tailwind CSS</span>
+                    <span>✦ REST API Architecture</span>
+                    <span>✦ System Design & Optimization</span>
+                </div>
+                <div class="flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold uppercase tracking-wider text-emerald-400/90 pr-6 sm:pr-8" aria-hidden="true">
+                    <span>✦ Software Development</span>
+                    <span>✦ Web Development</span>
+                    <span>✦ Full Stack Engineering</span>
+                    <span>✦ React & Next.js</span>
+                    <span>✦ JavaScript & TypeScript</span>
+                    <span>✦ Tailwind CSS</span>
+                    <span>✦ REST API Architecture</span>
+                    <span>✦ System Design & Optimization</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECTION: TENTANG (ABOUT) -->
+        <section class="py-16 sm:py-24 relative overflow-hidden" id="tentang">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Header Section -->
+                <div class="relative mb-12 sm:mb-16 flex justify-between items-end">
+                    <div class="reveal">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Mengenal Saya</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Tentang Saya</h2>
+                    </div>
+                    <span class="watermark-num hidden sm:block absolute -top-8 right-0" aria-hidden="true">01</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Profile Photo in About Section -->
+                    <div class="lg:col-span-5 reveal">
+                        <div class="glass-card spotlight-card p-3 rounded-2xl relative shadow-md max-w-sm sm:max-w-none mx-auto">
+                            <img src="https://i.ibb.co.com/LXhJSNMK/Screenshot-20260810-095900.png" 
+                                 alt="Foto Sohib Maulana Jaya - Software Engineer & Web Developer" 
+                                 class="w-full h-[320px] sm:h-[380px] object-cover object-center rounded-xl bg-slate-900"
+                                 loading="lazy">
+                            <div class="absolute -bottom-4 -right-2 sm:-bottom-5 sm:-right-5 bg-slate-900/95 p-3.5 sm:p-4 rounded-2xl shadow-xl border border-emerald-500/30">
+                                <p class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase">Status Saat Ini</p>
+                                <p class="text-xs sm:text-sm font-bold text-slate-100 flex items-center gap-1.5 mt-0.5">
+                                    <span class="w-2 h-2 rounded-full bg-brand-neon animate-ping"></span> Student & Software Developer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description Text & Highlights -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="reveal space-y-4 text-slate-300 leading-relaxed font-normal text-sm sm:text-base">
+                            <p class="text-base sm:text-lg font-medium text-slate-100">
+                                Saya adalah <strong class="text-brand-green">Sohib Maulana Jaya</strong>, seorang Software Engineer & Web Developer yang berorientasi pada hasil, efisiensi kode, dan kepuasan pengguna.
+                            </p>
+                            <p>
+                                Memiliki passion mendalam dalam merancang dan mengembangkan aplikasi web interaktif, mengintegrasikan API modern, serta mengoptimalkan performa antarmuka pengguna agar memberikan pengalaman digital yang seamless dan intuitif.
+                            </p>
+                            <p>
+                                Berkomitmen untuk terus belajar, mengikuti perkembangan teknologi terkini, dan siap berkontribusi pada proyek-proyek inovatif yang memberikan dampak nyata.
+                            </p>
+                        </div>
+
+                        <!-- Key Statistics with Animated Counters -->
+                        <div class="reveal grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 pt-4 sm:pt-6 border-t border-slate-800">
+                            <div class="p-4 glass-card spotlight-card rounded-xl text-center sm:text-left">
+                                <p class="text-2xl sm:text-3xl font-extrabold text-brand-green">
+                                    <span class="counter-number" data-target="3">0</span>+
+                                </p>
+                                <p class="text-xs font-medium text-slate-400 mt-1">Tahun Pengalaman</p>
+                            </div>
+                            <div class="p-4 glass-card spotlight-card rounded-xl text-center sm:text-left">
+                                <p class="text-2xl sm:text-3xl font-extrabold text-brand-green">
+                                    <span class="counter-number" data-target="20">0</span>+
+                                </p>
+                                <p class="text-xs font-medium text-slate-400 mt-1">Projek Selesai</p>
+                            </div>
+                            <div class="p-4 glass-card spotlight-card rounded-xl text-center sm:text-left">
+                                <p class="text-2xl sm:text-3xl font-extrabold text-brand-green">
+                                    <span class="counter-number" data-target="15">0</span>+
+                                </p>
+                                <p class="text-xs font-medium text-slate-400 mt-1">Klien & Mitra</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECTION: PENDIDIKAN (EDUCATION) -->
+        <section class="py-16 sm:py-24 bg-slate-950/60 relative overflow-hidden border-y border-slate-900" id="pendidikan">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="relative mb-12 sm:mb-16 flex justify-between items-end">
+                    <div class="reveal">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Riwayat Akademis</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Pendidikan</h2>
+                    </div>
+                    <span class="watermark-num hidden sm:block absolute -top-8 right-0" aria-hidden="true">02</span>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="max-w-3xl mx-auto relative border-l-2 border-emerald-950 ml-3 sm:ml-28 space-y-8 sm:space-y-12">
+                    
+                    <!-- ITEM PENDIDIKAN 1 -->
+                    <div class="reveal relative pl-6 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-4 border-brand-green shadow-sm group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="sm:absolute sm:-left-32 sm:top-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-green bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 inline-block mb-3 sm:mb-0">
+                            2025 - Sekarang
+                        </div>
+
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <h3 class="text-lg sm:text-xl font-bold text-white">S1 Sistem Informasi</h3>
+                            <p class="text-xs sm:text-sm font-semibold text-brand-green mt-0.5">UIN Raden Intan Lampung (Angkatan 2025)</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Berfokus pada Rekayasa Perangkat Lunak, Arsitektur Sistem Informasi Terdistribusi, Algoritma, Manajemen Basis Data, serta Pengembangan Platform Digital Kolaboratif Mahasiswa. Aktif menginisiasi dan mengembangkan portal sistem informasi kelas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM PENDIDIKAN 2 -->
+                    <div class="reveal relative pl-6 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-4 border-brand-green shadow-sm group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="sm:absolute sm:-left-32 sm:top-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-green bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 inline-block mb-3 sm:mb-0">
+                            2021 - 2024
+                        </div>
+
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <h3 class="text-lg sm:text-xl font-bold text-white">Rekayasa Perangkat Lunak (RPL)</h3>
+                            <p class="text-xs sm:text-sm font-semibold text-brand-green mt-0.5">Sekolah Menengah Kejuruan / IPA</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Mempelajari dasar-dasar pemograman web, logika algoritma, integrasi database, pembuatan aplikasi interaktif, serta troubleshooting perangkat lunak dan sistem digital.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECTION: PENGALAMAN KERJA (WORK EXPERIENCE) -->
+        <section class="py-16 sm:py-24 relative overflow-hidden" id="pengalaman">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="relative mb-12 sm:mb-16 flex justify-between items-end">
+                    <div class="reveal">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Perjalanan Karir</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Pengalaman Kerja</h2>
+                    </div>
+                    <span class="watermark-num hidden sm:block absolute -top-8 right-0" aria-hidden="true">03</span>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="max-w-3xl mx-auto relative border-l-2 border-emerald-950 ml-3 sm:ml-28 space-y-8 sm:space-y-12">
+                    
+                    <!-- ITEM PENGALAMAN 1 -->
+                    <div class="reveal relative pl-6 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-4 border-brand-neon shadow-sm group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="sm:absolute sm:-left-32 sm:top-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 bg-slate-900 border border-slate-700 px-3 py-1 rounded-full inline-block mb-3 sm:mb-0">
+                            2023 - Sekarang
+                        </div>
+
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <div class="flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white">Software Engineer / Web Developer</h3>
+                                    <p class="text-xs sm:text-sm font-semibold text-brand-green mt-0.5">Technology & Software Company</p>
+                                </div>
+                                <span class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/30">Full-time</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Mengembangkan dan memelihara aplikasi web modern berskala enterprise berbasis React, Next.js, Node.js, dan Tailwind CSS. Mengoptimalkan performa halaman, mengintegrasikan REST API, serta menghadirkan UI/UX yang responsif dan fleksibel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM PENGALAMAN 2 -->
+                    <div class="reveal relative pl-6 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-4 border-brand-neon shadow-sm group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="sm:absolute sm:-left-32 sm:top-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 bg-slate-900 border border-slate-700 px-3 py-1 rounded-full inline-block mb-3 sm:mb-0">
+                            2021 - 2023
+                        </div>
+
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <div class="flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white">Frontend Web Developer</h3>
+                                    <p class="text-xs sm:text-sm font-semibold text-brand-green mt-0.5">Digital Agency & Software Studio</p>
+                                </div>
+                                <span class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-slate-300 bg-slate-800 px-2.5 py-1 rounded-md border border-slate-700">Kontrak</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Merancang antarmuka web interaktif untuk berbagai produk digital klien. Mengonversi wireframe UI/UX menjadi komponen kode clean, responsif, dan optimal di seluruh perangkat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ITEM PENGALAMAN 3 -->
+                    <div class="reveal relative pl-6 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-4 border-brand-neon shadow-sm group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="sm:absolute sm:-left-32 sm:top-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 bg-slate-900 border border-slate-700 px-3 py-1 rounded-full inline-block mb-3 sm:mb-0">
+                            2020 - 2021
+                        </div>
+
+                        <div class="glass-card p-5 sm:p-6 rounded-2xl">
+                            <div class="flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white">Junior Web Developer & Intern</h3>
+                                    <p class="text-xs sm:text-sm font-semibold text-brand-green mt-0.5">Tech Startup & IT Solutions</p>
+                                </div>
+                                <span class="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-slate-300 bg-slate-800 px-2.5 py-1 rounded-md border border-slate-700">Internship</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Membantu pembuatan komponen UI reusable, perbaikan bug antarmuka pengguna, pengujian lintas browser, serta integrasi endpoint API dasar.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECTION: PRESTASI (ACHIEVEMENTS) -->
+        <section class="py-16 sm:py-24 bg-slate-950/60 relative overflow-hidden border-y border-slate-900" id="prestasi">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="relative mb-12 sm:mb-16 flex justify-between items-end">
+                    <div class="reveal">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Penghargaan & Pengakuan</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Prestasi & Pencapaian</h2>
+                    </div>
+                    <span class="watermark-num hidden sm:block absolute -top-8 right-0" aria-hidden="true">04</span>
+                </div>
+
+                <!-- Grid Kartu Prestasi Glassmorphism -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- KARTU PRESTASI 1 -->
+                    <div class="reveal reveal-delay-1 glass-card spotlight-card p-6 sm:p-7 rounded-2xl relative hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <span class="text-3xl sm:text-4xl font-extrabold text-emerald-500/20 absolute top-5 right-6 select-none font-mono">01</span>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-green flex items-center justify-center font-bold mb-5 text-xl">
+                                🎓
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">Inisiator Portal Sistem Informasi Kelas C</h3>
+                            <p class="text-xs font-semibold text-brand-green mt-1">UIN Raden Intan Lampung • 2025</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Berhasil merancang dan merilis platform kolaboratif digital terintegrasi untuk mahasiswa Sistem Informasi Kelas C yang memuat jadwal perkuliahan, direktori mahasiswa, dan dokumentasi foto realtime.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- KARTU PRESTASI 2 -->
+                    <div class="reveal reveal-delay-2 glass-card spotlight-card p-6 sm:p-7 rounded-2xl relative hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <span class="text-3xl sm:text-4xl font-extrabold text-emerald-500/20 absolute top-5 right-6 select-none font-mono">02</span>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-green flex items-center justify-center font-bold mb-5 text-xl">
+                                🤖
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">Inovasi Smart Trash Bin IoT & Machine Learning</h3>
+                            <p class="text-xs font-semibold text-brand-green mt-1">Projek Teknologi IoT • 2026</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Mengembangkan prototipe tempat sampah pintar berbasis ESP32 yang memanfaatkan Machine Learning untuk prediksi kapasitas realtime, analisis tren pembuangan, dan sistem peringatan otomatis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- KARTU PRESTASI 3 -->
+                    <div class="reveal reveal-delay-3 glass-card spotlight-card p-6 sm:p-7 rounded-2xl relative hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <span class="text-3xl sm:text-4xl font-extrabold text-emerald-500/20 absolute top-5 right-6 select-none font-mono">03</span>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-brand-green flex items-center justify-center font-bold mb-5 text-xl">
+                                🎮
+                            </div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">Pengembangan Interactive 3D Web Game</h3>
+                            <p class="text-xs font-semibold text-brand-green mt-1">Interactive WebGL & Three.js • 2026</p>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                                Membangun game interaktif 3D Egg Catcher berbasis Three.js dengan sistem peningkatan level, respon kontrol fleksibel (touch screen/keyboard/mouse), dan efek audio visual interaktif.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SECTION: PROJEK (PROJECTS) -->
+        <section class="py-16 sm:py-24 relative overflow-hidden" id="projek">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="relative mb-12 sm:mb-16 flex justify-between items-end">
+                    <div class="reveal">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-1">Portfolio Karya</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Projek Unggulan</h2>
+                    </div>
+                    <span class="watermark-num hidden sm:block absolute -top-8 right-0" aria-hidden="true">05</span>
+                </div>
+
+                <!-- Grid Projek -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    
+                    <!-- KARTU PROJEK 1: SISTEM INFORMASI KELAS C -->
+                    <article class="reveal reveal-delay-1 glass-card spotlight-card rounded-2xl overflow-hidden group flex flex-col justify-between hover:-translate-y-2 transition-all duration-300">
+                        <div>
+                            <div class="relative overflow-hidden aspect-video bg-slate-950 flex items-center justify-center p-3 sm:p-4">
+                                <!-- Visual Banner Mockup -->
+                                <div class="w-full h-full rounded-xl bg-gradient-to-br from-emerald-900/80 via-slate-900 to-emerald-950 p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden shadow-inner border border-emerald-500/20 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <div class="flex justify-between items-center z-10">
+                                        <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 backdrop-blur-md px-2.5 py-1 rounded-full border border-emerald-400/30 text-emerald-300">Portal Akademik</span>
+                                        <span class="text-[10px] sm:text-[11px] font-mono text-emerald-400">kelas-c.vercel.app</span>
+                                    </div>
+                                    <div class="z-10 my-auto pt-2">
+                                        <p class="text-[10px] sm:text-xs text-emerald-400 font-semibold uppercase tracking-wider">UIN Raden Intan Lampung</p>
+                                        <h4 class="text-base sm:text-lg font-extrabold text-white leading-tight mt-0.5">Sistem Informasi Kelas C</h4>
+                                    </div>
+                                    <div class="flex items-center justify-between text-[10px] sm:text-[11px] text-slate-300 border-t border-emerald-500/20 pt-2 z-10">
+                                        <span>Angkatan 2025</span>
+                                        <span class="text-emerald-400 font-medium flex items-center gap-1">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Platform
+                                        </span>
+                                    </div>
+                                    <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-emerald-500/20 rounded-full blur-xl pointer-events-none"></div>
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-green transition-colors">
+                                    Portal Sistem Informasi Kelas C
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-2 line-clamp-3 leading-relaxed">
+                                    Platform kolaboratif digital untuk program studi Sistem Informasi Kelas C angkatan 2025 Universitas Islam Negeri Raden Intan Lampung. Fitur mencakup direktori mahasiswa, jadwal perkuliahan, serta galeri dokumentasi kegiatan secara real-time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 sm:px-6 sm:pb-6">
+                            <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                                <span class="text-xs font-semibold text-slate-400">React • Tailwind • Vercel</span>
+                                <a href="https://kelas-c.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-bold text-brand-green flex items-center gap-1 hover:underline">
+                                    Kunjungi Live
+                                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- KARTU PROJEK 2: SMART TRASH BIN IOT -->
+                    <article class="reveal reveal-delay-2 glass-card spotlight-card rounded-2xl overflow-hidden group flex flex-col justify-between hover:-translate-y-2 transition-all duration-300">
+                        <div>
+                            <div class="relative overflow-hidden aspect-video bg-slate-950 flex items-center justify-center p-3 sm:p-4">
+                                <!-- Visual Banner Mockup Smart Trash Bin -->
+                                <div class="w-full h-full rounded-xl bg-gradient-to-br from-emerald-800 via-teal-900 to-slate-950 p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden shadow-inner border border-emerald-500/20 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <div class="flex justify-between items-center z-10">
+                                        <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-emerald-400/20 backdrop-blur-md px-2.5 py-1 rounded-full border border-emerald-300/30 text-emerald-300">IoT & Machine Learning</span>
+                                        <span class="text-[10px] sm:text-[11px] font-mono text-emerald-300">sampah11.vercel.app</span>
+                                    </div>
+                                    <div class="z-10 my-auto pt-2">
+                                        <div class="flex items-center gap-1.5">
+                                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                            <span class="text-[10px] sm:text-xs text-emerald-300 font-semibold uppercase tracking-wider">Realtime Analytics</span>
+                                        </div>
+                                        <h4 class="text-base sm:text-lg font-extrabold text-white leading-tight mt-0.5">Smart Trash Bin IoT</h4>
+                                    </div>
+                                    <div class="flex items-center justify-between text-[10px] sm:text-[11px] text-emerald-100 border-t border-emerald-500/20 pt-2 z-10">
+                                        <span>Monitoring & Prediksi ML</span>
+                                        <span class="font-bold text-amber-300">Status Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-green transition-colors">
+                                    Smart Trash Bin IoT & Machine Learning
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-2 line-clamp-3 leading-relaxed">
+                                    Sistem monitoring tempat sampah pintar berbasis mikrokontroler ESP32 terintegrasi dengan algoritma Machine Learning untuk prediksi kapasitas realtime, analisis tren pembuangan sampah otomatis, serta sistem notifikasi peringatan.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 sm:px-6 sm:pb-6">
+                            <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                                <span class="text-xs font-semibold text-slate-400">ESP32 • ML • Web API</span>
+                                <a href="https://sampah11.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-bold text-brand-green flex items-center gap-1 hover:underline">
+                                    Kunjungi Live
+                                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- KARTU PROJEK 3: 3D EGG CATCHER GAME -->
+                    <article class="reveal reveal-delay-3 glass-card spotlight-card rounded-2xl overflow-hidden group flex flex-col justify-between hover:-translate-y-2 transition-all duration-300">
+                        <div>
+                            <div class="relative overflow-hidden aspect-video bg-slate-950 flex items-center justify-center p-3 sm:p-4">
+                                <div class="w-full h-full rounded-xl bg-gradient-to-br from-green-700 via-emerald-900 to-slate-950 p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden shadow-inner border border-emerald-500/20 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <div class="flex justify-between items-center z-10">
+                                        <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-emerald-400/30 text-emerald-300">3D Web Game</span>
+                                        <span class="text-[10px] sm:text-[11px] font-mono text-emerald-300">egg-catcher.vercel.app</span>
+                                    </div>
+                                    <div class="z-10 my-auto pt-2">
+                                        <div class="flex items-center gap-1.5">
+                                            <span class="text-[10px] sm:text-xs text-emerald-300 font-semibold uppercase tracking-wider">🎮 Interactive 3D</span>
+                                        </div>
+                                        <h4 class="text-base sm:text-lg font-extrabold text-white leading-tight mt-0.5">Egg Catcher 3D Game</h4>
+                                    </div>
+                                    <div class="flex items-center justify-between text-[10px] sm:text-[11px] text-emerald-100 border-t border-emerald-500/20 pt-2 z-10">
+                                        <span>Three.js / WebGL</span>
+                                        <span class="text-amber-300 font-bold">♥ Level Progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5 sm:p-6">
+                                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-brand-green transition-colors">
+                                    3D Egg Catcher Interactive Web Game
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-2 line-clamp-3 leading-relaxed">
+                                    Game web 3D interaktif berbasis Three.js bertema menangkap telur menggunakan keranjang. Dilengkapi kontrol fleksibel (layar sentuh, tombol panah & mouse), sistem nyawa, efek audio, serta peningkatan tingkat kesulitan level.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 sm:px-6 sm:pb-6">
+                            <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                                <span class="text-xs font-semibold text-slate-400">Three.js • JavaScript</span>
+                                <a href="https://egg-catcher-smoky.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-bold text-brand-green flex items-center gap-1 hover:underline">
+                                    Mainkan Live
+                                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. KONTAK SECTION -->
+        <section class="py-16 sm:py-24 bg-slate-950 text-white relative overflow-hidden border-t border-emerald-950" id="kontak">
+            <div class="absolute top-0 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-brand-green/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8">
+                    
+                    <div class="reveal">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest block mb-2">Mari Berkomunikasi</span>
+                        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                            Punya Projek atau Peluang Kerja? <br class="hidden sm:inline">
+                            <span class="gradient-text">Mari Wujudkan Bersama.</span>
+                        </h2>
+                    </div>
+
+                    <p class="reveal text-slate-300 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto">
+                        Saya selalu terbuka untuk berdiskusi tentang pengembangan software, kolaborasi web development, atau posisi kerja menarik. Silakan terhubung dengan saya.
+                    </p>
+
+                    <!-- Direct Email CTA -->
+                    <div class="reveal pt-2 flex flex-col sm:flex-row justify-center items-center gap-3">
+                        <a href="mailto:sohibmaulanajaya@gmail.com" class="w-full sm:w-auto gradient-btn inline-flex items-center justify-center gap-3 font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl shadow-xl shadow-brand-green/20">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            sohibmaulanajaya@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- Social Links List -->
+                    <div class="reveal pt-6 sm:pt-8 flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-medium">
+                        <a href="mailto:sohibmaulanajaya@gmail.com" class="px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 hover:border-brand-green/50">
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sohib-maulana-jaya" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 hover:border-brand-green/50">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/sohibmaulanajaya" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 hover:border-brand-green/50">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/jaaay.77" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors flex items-center gap-2 hover:border-brand-green/50">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-black text-slate-400 py-6 sm:py-8 border-t border-slate-900 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p>© <span id="currentYear"></span> Sohib Maulana Jaya. Hak Cipta Dilindungi.</p>
+            
+            <!-- Back to Top Button -->
+            <a href="#hero" class="flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-brand-green transition-colors group">
+                Kembali ke Atas
+                <svg class="w-4 h-4 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Top Scroll Progress Bar Update
+            const scrollProgressBar = document.getElementById('scrollProgressBar');
+            window.addEventListener('scroll', function () {
+                const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height);
+                if (scrollProgressBar) {
+                    scrollProgressBar.style.transform = `scaleX(${scrolled})`;
+                }
+            }, { passive: true });
+
+            // Interactive Mouse Spotlight Effect on Glass Cards
+            const spotlightCards = document.querySelectorAll('.spotlight-card');
+            spotlightCards.forEach(card => {
+                card.addEventListener('mousemove', function (e) {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+
+            // Number Counter Animation for Stats Section
+            let countersAnimated = false;
+            function startCounters() {
+                const counters = document.querySelectorAll('.counter-number');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+                    let count = 0;
+                    const duration = 1500; // ms
+                    const stepTime = Math.max(Math.floor(duration / target), 30);
+                    
+                    const timer = setInterval(() => {
+                        count += 1;
+                        counter.textContent = count;
+                        if (count >= target) {
+                            counter.textContent = target;
+                            clearInterval(timer);
+                        }
+                    }, stepTime);
+                });
+            }
+
+            // Set Dynamic Year in Footer
+            const currentYearEl = document.getElementById('currentYear');
+            if (currentYearEl) {
+                currentYearEl.textContent = new Date().getFullYear();
+            }
+
+            // Mobile Navigation Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuPath = document.getElementById('menuPath');
+
+            if (mobileMenuBtn && mobileMenu) {
+                let isOpen = false;
+                mobileMenuBtn.addEventListener('click', function () {
+                    isOpen = !isOpen;
+                    mobileMenu.classList.toggle('hidden', !isOpen);
+                    
+                    if (isOpen) {
+                        menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                    } else {
+                        menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                    }
+                });
+
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        isOpen = false;
+                        mobileMenu.classList.add('hidden');
+                        menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                    });
+                });
+            }
+
+            // Scroll Header Shadow Effect
+            const nav = document.getElementById('mainNav');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 30) {
+                    nav.classList.add('shadow-xl', 'border-slate-800');
+                } else {
+                    nav.classList.remove('shadow-xl', 'border-slate-800');
+                }
+            }, { passive: true });
+
+            // ========================================================
+            // BIDIRECTIONAL SCROLL REVEAL ANIMATION SYSTEM (UP & DOWN)
+            // ========================================================
+            let lastScrollY = window.scrollY;
+            let scrollDirection = 'down';
+
+            window.addEventListener('scroll', function () {
+                const currentScrollY = window.scrollY;
+                scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+                lastScrollY = currentScrollY;
+            }, { passive: true });
+
+            const revealElements = document.querySelectorAll('.reveal');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+                const observerOptions = {
+                    root: null,
+                    threshold: 0.12,
+                    rootMargin: '-10px 0px -10px 0px'
+                };
+
+                const revealObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(entry => {
+                        const el = entry.target;
+
+                        if (entry.isIntersecting) {
+                            if (scrollDirection === 'down') {
+                                el.classList.remove('slide-from-top');
+                                el.classList.add('slide-from-bottom');
+                            } else {
+                                el.classList.remove('slide-from-bottom');
+                                el.classList.add('slide-from-top');
+                            }
+
+                            requestAnimationFrame(() => {
+                                el.classList.add('reveal-active');
+                            });
+
+                            // Trigger counter animation when stats become visible
+                            if (!countersAnimated && el.querySelector('.counter-number')) {
+                                countersAnimated = true;
+                                startCounters();
+                            }
+                        } else {
+                            el.classList.remove('reveal-active', 'slide-from-bottom', 'slide-from-top');
+                        }
+                    });
+                }, observerOptions);
+
+                revealElements.forEach(el => revealObserver.observe(el));
+            } else {
+                revealElements.forEach(el => el.classList.add('reveal-active'));
+                if (!countersAnimated) {
+                    countersAnimated = true;
+                    startCounters();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
